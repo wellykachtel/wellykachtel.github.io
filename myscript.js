@@ -21,8 +21,6 @@ $(document).ready(function(){
 		}
 	
 		var win = $(window).scrollTop();
-		console.log("window: " + win);
-		console.log("top of box: " + topOfTextBox1);
 		
 
 		if( (win > 116) && (animateFlag == 1)){
@@ -39,6 +37,11 @@ $(document).ready(function(){
 		}
 		
 	});
-	
+
+	$('#pic2ID').click(funciton{
+		var txt = "<a href='http://www.wellykachtel.com/index.html' id = 'topID'> Go To Top</a>";
+		$("#myTitle").after(txt);
+	});
+	$('#pic2ID').remove();
 
 });

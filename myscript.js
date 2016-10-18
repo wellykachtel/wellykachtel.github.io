@@ -27,6 +27,8 @@ $(document).ready(function(){
 			animateFlag = 0;
 			$('#websiteTitle').addClass("scrolledTitle");
 			//$('#websiteTitle').removeClass("websiteTitle");
+			document.getElementById("pic2ID").innerHTML = " ";
+			document.getElementById("topID").innerHTML = "Go to Top";
 		}
 
 		else if(win < 116){
@@ -34,14 +36,13 @@ $(document).ready(function(){
 			animateFlag = 1;
 			$('#websiteTitle').removeClass("scrolledTitle");
 			//$('#websiteTitle').addClass("websiteTitle");
+			document.getElementById("pic2ID").innerHTML = "Go to Text Box 2";
+			document.getElementById("topID").innerHTML = " ";
 		}
 		
 	});
 
-	$('#pic2ID').click(funciton{
-		var txt = "<a href='http://www.wellykachtel.com/index.html' id = 'topID'> Go To Top</a>";
-		$("#myTitle").after(txt);
-	});
-	$('#pic2ID').remove();
+	
+	
 
 });

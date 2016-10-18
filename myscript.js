@@ -1,4 +1,4 @@
-$(document).ready(function(){
+/*$(document).ready(function(){
 
 	$('#textOnPic1, #textOnPic2').hide();
 	$('#textOnPic1, #textOnPic2').scroll(function(){
@@ -6,4 +6,4 @@ $(document).ready(function(){
 		$('#textOnPic2').fadeIn();
 	});
 
-});
+});*/

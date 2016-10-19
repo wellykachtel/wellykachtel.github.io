@@ -12,12 +12,9 @@ $(document).ready(function(){
 
 			var topOfBox = $(this).offset().top;
 			var bottomOfWindow = $(window).scrollTop() + $(window).height();
-			//console.log(i + " top of Box= " + topOfBox);
-			console.log(i + " bottom of window: " + bottomOfWindow);
 
 			if(bottomOfWindow >= (fadeIndex + (i*1000))){
 				$(this).fadeIn("slow");
-				console.log(i + " is now on");
 		
 			}
 			else if((bottomOfWindow - topOfBox) < 10 ){
@@ -37,24 +34,27 @@ $(document).ready(function(){
 		if( (win > 116) && (animateFlag == 1)){
 			animateFlag = 0;
 			$('#websiteTitle').addClass("scrolledTitle");
-			//$('#websiteTitle').removeClass("websiteTitle");
-			document.getElementById("pic2ID").innerHTML = " ";
-			document.getElementById("pic3ID").innerHTML = " ";
+			$("#links").removeClass("dropdown");
+			document.getElementById("pic2ID").innerHTML = "";
+			document.getElementById("pic3ID").innerHTML = "";
 			document.getElementById("topID").innerHTML = "Go to Top";
+			document.getElementById("dropdownMenu").innerHTML = "";
 		}
 
 		else if(win < 116){
 			
 			animateFlag = 1;
 			$('#websiteTitle').removeClass("scrolledTitle");
-			//$('#websiteTitle').addClass("websiteTitle");
-			document.getElementById("pic2ID").innerHTML = "Go to Text Box 2";
-			document.getElementById("pic3ID").innerHTML = "Go to Text Box 3";
-			document.getElementById("topID").innerHTML = " ";
+			$("#links").addClass("dropdown");
+			document.getElementById("pic2ID").innerHTML = "Text Box 2";
+			document.getElementById("pic3ID").innerHTML = "Text Box 3";
+			document.getElementById("topID").innerHTML = "";
+			document.getElementById("dropdownMenu").innerHTML = "Go To";
 		}
 		
 	});
-
+	
+	
 	
 	
 

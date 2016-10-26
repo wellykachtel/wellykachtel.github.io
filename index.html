@@ -7,7 +7,8 @@
       <link rel="stylesheet" type="text/css" href="mystyle.css">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-      <script src="myscript.js"></script>
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <!--script src="myscript.js"></script>-->
    </head>
    <body>
       
@@ -17,18 +18,18 @@
          <div class="websiteTitle" id="websiteTitle">
 
             <h1 id = "myTitle">Kelly Wachtel</h1>
-            <p> <i> Put great quote here -Kelly Wachtel </i></p>
+            <p> <i> UGH </i></p>
             <a href = "file:///C:/Users/kelly.wachtel/Desktop/Website/wellykachtel.github.io/index.html" id = "topID"></a>
             
          </div>
          
-         <div class = "dropdown" id="links">
+         <!--<div class = "dropdown" id="links">
             <span id="dropdownMenu">Go To</span>
                <div class="dropdown-content">
-                  <a href = "file:///C:/Users/kelly.wachtel/Desktop/Website/wellykachtel.github.io/index.html#pic2" id = "pic2ID"> Text Box 2</a>
+                 <a href = "file:///C:/Users/kelly.wachtel/Desktop/Website/wellykachtel.github.io/index.html#pic2" id = "pic2ID"> Text Box 2</a>
                   <a href = "file:///C:/Users/kelly.wachtel/Desktop/Website/wellykachtel.github.io/index.html#pic3" id = "pic3ID"> Text Box 3</a>
                </div>
-         </div>
+         </div>-->
             
          <div class="row">
             <div class="col-12">
@@ -37,9 +38,52 @@
          
          <div class="col-3">
          </div>
+
+
          <div class="col-6 textBox" id="textOnPic1">
-            <h2> BREAD </h2>
-            <p id="textBox1"><embed src="bread.txt" height="700" width="100%"></p>
+            <h2> Budget Calculator </h2>
+            <div class = "col-4 leftCol">
+               <h4 id="initialSalary"></h4>
+               <ul id = "ExpenseList">
+                  
+               </ul>
+               <h4 id="netEarnings"></h4><br>
+               
+            </div>
+            <div class="col-8 rightCol">
+               <form>
+                  <select name = "checkType" id="checkType">
+                     <option>Pick your salary frequency</option>
+                     <option value="0">Biweekly</option>
+                     <option value="1">Twice a Month</option>
+                  </select>
+                  <br><br>
+
+                  Enter paycheck amount (after tax):<br>$<input type="text" id="fullAmount">
+                  <br>
+                  
+                  <br>
+                  <h4> Monthly Expenses </h4>
+                 
+                  <div class="sideBySide">
+                     Tag name:<br>
+                     Amount:
+                  </div>
+                  <div class="sideBySide">
+                     <input type="text" id="newExpense"> 
+                     <br>
+                     <input type="text" id="newExpenseAmount">
+                  </div>
+                  <br>
+                  <button type="button" onclick="submitExpense()">Add</button>
+                  <br>
+                  <br>
+                  <button type = "button" onclick="generatePieChart()">Generate Pie Chart</button>
+               </form>
+            </div>
+
+         <div id="piechart" style="width: 100%; height: 400px;"></div>
+
          </div>
          <div class="col-3">
          </div>
@@ -47,7 +91,7 @@
       </div>
 
 
-      <div class="row pic2" id = "pic2">
+     <!-- <div class="row pic2" id = "pic2">
          <div class="row">
             <div class="col-12 topPadding">
             </div>
@@ -77,11 +121,11 @@
             <div class="col-3">
             </div>
   
-      </div>
+      </div>-->
 
 
 
-   
+   <script src="budgetjs.js"></script>
    </body>
 
 </html>

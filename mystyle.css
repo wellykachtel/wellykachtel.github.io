@@ -71,7 +71,14 @@ body{
     
 }
 
+.sideBySide{
+    display:inline-block;
+}
+#ExpenseList{
+    list-style-type:none;
+}
 
+/*
 .pic2{
     background-image:url("mountains.jpg");
     background-attachment:fixed;
@@ -86,7 +93,7 @@ body{
     
     height:1000px;
     
-}
+}*/
 #websiteTitle a{
     float:right;
 }
@@ -169,15 +176,22 @@ body{
 .textBox{
    background-color:rgba(255,255,255,0.8);
     opacity:1;
-    text-align: center;
     overflow: visible;
     height:80%;
     margin-top: 100px;
+    position:relative;
 }
 
+h2{
+    text-align:center;
+}
 
+#piechart{
+    position:absolute;
+    background-color:rgba(255,255,255,0);
+    bottom:0px;
 
-
+}
 
 
 

@@ -46,6 +46,8 @@ function submitExpense(){
 	li.appendChild(document.createTextNode(newTagName + ": $" + newAmount));
 	ul.appendChild(li);
 	expenseArray.push([newTagName,newAmount]);
+	document.getElementById("newExpense").value = " ";
+	document.getElementById("newExpenseAmount").value = 0;
 
 }
 
@@ -60,7 +62,8 @@ function drawChart() {
 
 
     var options = {
-        title: 'My Expenses'
+        title: 'My Expenses',
+        backgroundColor: 'transparent'
      };
 
     var chart = new google.visualization.PieChart(document.getElementById('piechart'));

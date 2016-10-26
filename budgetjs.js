@@ -9,6 +9,7 @@ var firstFlag = 1;
 var net = 0;
 var warningAmount = 100;
 var expenseArray = [['Expense Name','Expense Amount']];
+var index = 0;
 
 function submitExpense(){
 	var ul = document.getElementById("ExpenseList");
@@ -16,6 +17,7 @@ function submitExpense(){
 	var newTagName = document.getElementById("newExpense").value;
 	var newAmount = document.getElementById("newExpenseAmount").value;
 	var multiplier = document.getElementById("checkType").value;
+
 
 	salary = document.getElementById("fullAmount").value;
 	salary = parseFloat(salary);
@@ -43,13 +45,39 @@ function submitExpense(){
 		document.getElementById("netEarnings").style.color = "red";
 	}
 
-	li.appendChild(document.createTextNode(newTagName + ": $" + newAmount));
+	var tagDiv = document.createElement("DIV");
+	var tagText = document.createTextNode(newTagName + ":  $");
+	tagDiv.setAttribute("id","tag"+index);
+	tagDiv.setAttribute("class","sideBySide tag");
+	tagDiv.appendChild(tagText);
+
+	var amountDiv = document.createElement("DIV");
+	var amountText = document.createTextNode(newAmount);
+	amountDiv.setAttribute("id","amount"+index);
+	amountDiv.setAttribute("class","sideBySide amount");
+	amountDiv.appendChild(amountText);
+
+	var expenseButton = document.createElement("BUTTON");
+	var buttonText = document.createTextNode("Remove");
+	expenseButton.appendChild(buttonText);
+	expenseButton.setAttribute("class","sideBySide");
+
+
+	var spanDiv = document.createElement("DIV");
+	spanDiv.appendChild(tagDiv);
+	spanDiv.appendChild(amountDiv);
+	spanDiv.appendChild(expenseButton);
+	spanDiv.setAttribute("class", "expenseDiv");
+
+	li.appendChild(spanDiv);
 	ul.appendChild(li);
 	expenseArray.push([newTagName,newAmount]);
-	document.getElementById("newExpense").value = " ";
-	document.getElementById("newExpenseAmount").value = 0;
+	document.getElementById("newExpense").value = "";
+	document.getElementById("newExpenseAmount").value = "";
 
 }
+
+
 
 function generatePieChart(){
 
@@ -70,3 +98,13 @@ function drawChart() {
 
     chart.draw(data, options);
 }
+
+$("#ExpenseList").on("click","button",function(e){
+	e.preventDefault();
+	var number = $(this).siblings(".amount").text();
+	number = parseFloat(number);
+	net = net + number;
+	document.getElementById("netEarnings").innerHTML = "Net:    $" + net;
+
+	$(this).parent().remove();
+});

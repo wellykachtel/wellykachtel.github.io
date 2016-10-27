@@ -28,7 +28,7 @@ $(document).ready(function(){
 		
 		
 	
-		/*var win = $(window).scrollTop();
+		var win = $(window).scrollTop();
 		
 
 		if( (win > 116) && (animateFlag == 1)){
@@ -50,7 +50,7 @@ $(document).ready(function(){
 			document.getElementById("pic3ID").innerHTML = "Text Box 3";
 			document.getElementById("topID").innerHTML = "";
 			document.getElementById("dropdownMenu").innerHTML = "Go To";
-		}*/
+		}
 		
 	});
 	

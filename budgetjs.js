@@ -10,12 +10,15 @@ var net = 0;
 var warningAmount = 100;
 var expenseArray = [['Expense Name','Expense Amount']];
 var index = 0;
+var lastElementAdded;
+var newAmount;
+var li;
 
 function submitExpense(){
 	var ul = document.getElementById("ExpenseList");
-	var li = document.createElement("li");
+	li = document.createElement("li");
 	var newTagName = document.getElementById("newExpense").value;
-	var newAmount = document.getElementById("newExpenseAmount").value;
+	newAmount = document.getElementById("newExpenseAmount").value;
 	var multiplier = document.getElementById("checkType").value;
 
 
@@ -57,23 +60,26 @@ function submitExpense(){
 	amountDiv.setAttribute("class","sideBySide amount");
 	amountDiv.appendChild(amountText);
 
-	var expenseButton = document.createElement("BUTTON");
+	/*var expenseButton = document.createElement("BUTTON");
 	var buttonText = document.createTextNode("Remove");
 	expenseButton.appendChild(buttonText);
-	expenseButton.setAttribute("class","sideBySide");
+	expenseButton.setAttribute("class","sideBySide");*/
 
 
 	var spanDiv = document.createElement("DIV");
 	spanDiv.appendChild(tagDiv);
 	spanDiv.appendChild(amountDiv);
-	spanDiv.appendChild(expenseButton);
+	//spanDiv.appendChild(expenseButton);
 	spanDiv.setAttribute("class", "expenseDiv");
 
 	li.appendChild(spanDiv);
 	ul.appendChild(li);
+	lastElementAdded = li;
 	expenseArray.push([newTagName,newAmount]);
+	console.log(expenseArray.length);
 	document.getElementById("newExpense").value = "";
 	document.getElementById("newExpenseAmount").value = "";
+	index++;
 
 }
 
@@ -98,7 +104,7 @@ function drawChart() {
 
     chart.draw(data, options);
 }
-
+/*
 $("#ExpenseList").on("click","button",function(e){
 	e.preventDefault();
 	var number = $(this).siblings(".amount").text();
@@ -107,4 +113,13 @@ $("#ExpenseList").on("click","button",function(e){
 	document.getElementById("netEarnings").innerHTML = "Net:    $" + net;
 
 	$(this).parent().remove();
-});
+});*/
+function undoLast(){
+
+	net = net + newAmount;
+	$(li).remove();
+	expenseArray.pop();
+	document.getElementById("netEarnings").innerHTML = "Net:    $" + net;
+
+
+}

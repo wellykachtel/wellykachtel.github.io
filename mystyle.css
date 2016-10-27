@@ -77,7 +77,15 @@ body{
 #ExpenseList{
     list-style-type:none;
 }
-
+#suggested{
+    list-style-type:none;
+    margin: 0;
+    padding:0;
+}
+#suggested li{
+    margin: 0;
+    padding: 0;
+}
 
 .pic2{
     background-image:url("mountains.jpg");

@@ -15,6 +15,7 @@ html,body{
 [class*="col-"] {
     float: left;
     padding: 8px;
+    /*border:1px solid black;*/
     
 }
 html {
@@ -194,12 +195,6 @@ h2{
     text-align:center;
 }
 
-#piechart{
-    position:absolute;
-    background-color:rgba(255,255,255,0);
-    bottom:0px;
-
-}
 
 
 

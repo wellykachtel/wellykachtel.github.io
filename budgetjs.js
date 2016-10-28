@@ -9,6 +9,7 @@ var firstFlag = 1;
 var net = 0;
 var warningAmount = 100;
 var expenseArray = [['Expense Name','Expense Amount']];
+var netArray = [['Expense Name', 'Expense Amount']];
 var index = 0;
 var lastElementAdded;
 var newAmount;
@@ -87,7 +88,11 @@ function submitExpense(){
 
 function generatePieChart(){
 
+	netArray.push(['Expenses', expenses]);
+	netArray.push(['Left Over', net]);
+
 	google.charts.setOnLoadCallback(drawChart);
+	google.charts.setOnLoadCallback(drawChart2);
 
 }
 function drawChart() {
@@ -104,6 +109,20 @@ function drawChart() {
 
     chart.draw(data, options);
 }
+function drawChart2() {
+
+	var data = google.visualization.arrayToDataTable(netArray);
+
+
+    var options = {
+        title: 'Budget Composition',
+        backgroundColor: 'transparent'
+     };
+
+    var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
+
+    chart.draw(data, options);
+}
 /*
 $("#ExpenseList").on("click","button",function(e){
 	e.preventDefault();
@@ -117,6 +136,7 @@ $("#ExpenseList").on("click","button",function(e){
 function undoLast(){
 
 	net = net + newAmount;
+	expenses = expenses - newAmount;
 	$(li).remove();
 	expenseArray.pop();
 	document.getElementById("netEarnings").innerHTML = "Net:    $" + net;

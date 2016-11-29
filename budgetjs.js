@@ -90,6 +90,7 @@ function generatePieChart(){
 
 	netArray.push(['Expenses', expenses]);
 	netArray.push(['Left Over', net]);
+	expenseArray.push(['LeftOver', net]);
 
 	google.charts.setOnLoadCallback(drawChart);
 	google.charts.setOnLoadCallback(drawChart2);

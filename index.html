@@ -6,152 +6,135 @@
       <link rel="icon" href="kwicon.png">
       <link rel="stylesheet" type="text/css" href="mystyle.css">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
       <script src="myscript.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    </head>
    <body>
 
-
-      <div class="row pic1">
-
-         <div class="websiteTitle" id="websiteTitle">
-
-            <h1 id = "myTitle">Kelly Wachtel</h1>
-            <p> <i> "Pesto is the Quiche of the 80's" </i></p>
-            <!--<a href = "file:///C:/Users/kelly.wachtel/Desktop/Website/wellykachtel.github.io/index.html" id = "topID"></a>-->
-
+   <div class="container" id="topScreen">
+      <div class="row">
+         <div class="col-sm-12">
+             <p class="homeTitle" id="firstName"><strong>Kelly</strong></p>
          </div>
+      </div>
+      <div class="row">
+         <div class="col-sm-12">
+            <p class="homeTitle" id="lastName">Wachtel</p>
+         </div>
+      </div>
+   </div>
 
-         <!--<div class = "dropdown" id="links">
-            <span id="dropdownMenu">Go To</span>
-               <div class="dropdown-content">
-                 <a href = "file:///C:/Users/kelly.wachtel/Desktop/Website/wellykachtel.github.io/index.html#pic2" id = "pic2ID"> Text Box 2</a>
-                  <a href = "file:///C:/Users/kelly.wachtel/Desktop/Website/wellykachtel.github.io/index.html#pic3" id = "pic3ID"> Text Box 3</a>
+   <div class="container" id="secondScreen">
+      <div class="row">
+         <div class="col-sm-12" id="largeWell">
+            <ul class="nav nav-tabs">
+               <li class="active" >
+                  <a data-toggle="tab" href="#contact">
+                     <span class="glyphicon glyphicon-user" id="glyphColor"></span>
+                  </a>
+               </li>
+               <li>
+                  <a data-toggle="tab" href="#experience" >
+                     <span class="glyphicon glyphicon-briefcase" id="glyphColor"></span>
+                  </a>
+               </li>
+               <li>
+                  <a data-toggle="tab" href="#projects">
+                     <span class="glyphicon glyphicon-tasks" id="glyphColor"></span>
+                  </a>
+               </li>
+               <li>
+                  <a data-toggle="tab" href="#education">
+                     <span class="glyphicon glyphicon-education" id="glyphColor"></span>
+                  </a>
+               </li>
+            </ul>
+
+            <div class="tab-content">
+               <div class="tab-pane fade in active" id="contact">
+                  <h4 id="txtColor">Phone</h4><div id="txtColor">217-722-0655</div>
+                  <br>
+                  <h4 id="txtColor">Email</h4><div id="txtColor">welly.kachtel@gmail.com</div>
+                  <br>
+                  <h4 id="txtColor">Location</h4><div id="txtColor">Chicago, IL 60613</div>
                </div>
-         </div>-->
-
-         <div class="row">
-            <div class="col-12">
-            </div>
-         </div>
-
-         <div class="col-3">
-         </div>
 
 
-         <div class="col-6 textBox" id="textOnPic1">
-            <h2> Budget Calculator </h2>
-            <div class = "col-4 leftCol">
-               <h4 id="initialSalary"></h4>
-               <ul id = "ExpenseList">
 
-               </ul>
-               <button type="button" onclick="undoLast()">Undo</button>
-               <h4 id="netEarnings"></h4><br>
-
-
-            </div>
-            <div class="col-6 rightCol">
-               <form>
-                  <select name = "checkType" id="checkType">
-                     <option>Pick your salary frequency</option>
-                     <option value="0">Biweekly</option>
-                     <option value="1">Twice a Month</option>
-                  </select>
-                  <br><br>
-
-                  Enter paycheck amount (after tax):<br>$<input type="text" id="fullAmount">
-                  <br>
-
-                  <br>
-                  <h4> Monthly Expenses </h4>
-
-                  <div class="sideBySide">
-                     Tag name:<br>
-                     Amount:
+               <div class="tab-pane fade" id="experience">
+               <div class="row">
+                  <div class="col-sm-6" id="txtColor">
+                     Convergint Technologies
                   </div>
-                  <div class="sideBySide">
-                     <input type="text" id="newExpense">
-                     <br>
-                     <input type="text" id="newExpenseAmount">
+                  <div class="col-sm-6" id="txtColor">
+                     June 2016-Present
                   </div>
-                  <br>
-                  <button type="button" onclick="submitExpense()">Add</button>
-                  <br>
-
-                  <br>
-                  <button type = "button" onclick="generatePieChart()">Generate Pie Chart</button>
-               </form>
-            </div>
-            <div class = "col-2">
-               <a href = "http://wellykachtel.com">RESET</a>
-               <br>
-               <h4> Suggested Expenses</h4>
-               <ul id = "suggested">
-                  <li> Rent</li>
-                  <li> Groceries</li>
-                  <li> Utilities</li>
-                  <li> Shopping</li>
-                  <li> Gas</li>
-                  <li> Car Payments</li>
-                  <li> Recreational</li>
-                  <li> Student Loans</li>
-               </ul>
-            </div>
-            <div class = "row">
-               <div class = "col-12">
-               <table class="columns">
-                  <tr>
-                     <td><div id="piechart"  style="width: 50%; height: 400px;"></div></td>
-                     <td><div id="piechart2"  style="width: 50%; height: 400px;"></div></td>
-                  </tr>
-               </table>
                </div>
+                  <div id="txtColor">Schaumburg, IL—Web Application Developer</div>
+                  <ul>
+                     <li id="txtColor">
+                        Refactor and maintain Convergint’s customer portal using Twig template engine.
+                     </li>
+                     <li id="txtColor">
+                        Created an internal application to monitor Convergint applications and websites.
+                     </li>
+                     <li id="txtColor">
+                        Communicate with multiple departments to gather requirements needed for further development.
+                     </li>
+                  </ul>
+
+                  <hr>
+                  <div class="row">
+                     <div class="col-sm-6" id="txtColor">
+                        Sullair Corporation
+                     </div>
+                     <div class="col-sm-6" id="txtColor">
+                        Summer 2015
+                     </div>
+                  </div>
+                  <div id="txtColor">Michigan City, IN—Information Technology Intern</div>
+
+                  <ul>
+                     <li id="txtColor">
+                        Database manipulation and extraction using SQL
+                     </li>
+                     <li id="txtColor">
+                        SharePoint Workflow and SDLC management
+                     </li >
+                     <li id="txtColor">
+                        Application development in JD Edwards
+                     </li>
+                  </ul>
+               </div>
+
+
+
+               <div class="tab-pane fade" id="projects">
+                  <h4 id="txtColor">Phone</h4><div id="txtColor">217-722-0655</div>
+                  <br>
+                  <h4 id="txtColor">Email</h4><div id="txtColor">welly.kachtel@gmail.com</div>
+                  <br>
+                  <h4 id="txtColor">Location</h4><div id="txtColor">Chicago, IL 60613</div>
+               </div>
+
+
+
+               <div class="tab-pane fade" id="education">
+                  <h4 id="txtColor">Purdue School of Engineering and Technology, IUPUI</h4>
+                  <br>
+                  <div id="txtColor">Bachelor of Science in Computer Engineering</div>
+                  <br>
+                  <div id="txtColor">Graduated May 2016</div>
             </div>
 
-         </div>
-         <div class="col-3">
-         </div>
+
 
       </div>
-
-
-     <div class="row pic2" id = "pic2">
-         <div class="row">
-            <div class="col-12 topPadding">
-            </div>
-         </div>
-            <div class="col-3">
-            </div>
-            <div class="col-6 textBox" id="textOnPic2">
-               <h2> Text Box 2 </h2>
-               <p id="textBox2"></p>
-            </div>
-            <div class="col-3">
-            </div>
-
-      </div>
-
-       <!--<div class="row pic3" id = "pic3">
-         <div class="row">
-            <div class="col-12 topPadding">
-            </div>
-         </div>
-            <div class="col-3">
-            </div>
-            <div class="col-6 textBox" id="textOnPic3">
-               <h2> Text Box 3 </h2>
-               <p id="textBox3"></p>
-            </div>
-            <div class="col-3">
-            </div>
-
-      </div>-->
+</div></div>
 
 
 
-   <script src="budgetjs.js"></script>
    </body>
-
 </html>

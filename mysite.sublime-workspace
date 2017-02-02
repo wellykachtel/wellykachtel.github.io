@@ -15,7 +15,27 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 5166,
+				"buffer_size": 5051,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "$(document).ready(function(){\n\n\t$(\".textBox\").nextAll().hide();\n\tvar fadeFlag = 1;\n\tvar animateFlag = 1;\n\tvar fadeIndex = 200;\n \n\n\t$(window).scroll(function(){\n\n\t\t$('.textBox').each(function(i){\n\n\t\t\tvar topOfBox = $(this).offset().top;\n\t\t\tvar bottomOfWindow = $(window).scrollTop() + $(window).height();\n\n\t\t\tif(bottomOfWindow >= (fadeIndex + (i*1000))){\n\t\t\t\t$(this).fadeIn(\"slow\");\n\t\t\n\t\t\t}\n\t\t\telse if((bottomOfWindow - topOfBox) < 10 ){\n\t\t\t\t$(this).hide();\n\t\t\t}\n\n\t\t});\n\t\t//var topOfTextBox2 = $('#textOnPic2').offset().top;\n\t\t//var topOfTextBox1 = $('#textOnPic1').offset().top;\n\t\t//var bottomOfWindow = $(window).scrollTop() + $(window).height();\n\t\t\n\t\t\n\t\n\t\tvar win = $(window).scrollTop();\n\t\t\n\n\t\tif( (win > 116) && (animateFlag == 1)){\n\t\t\tanimateFlag = 0;\n\t\t\t$('#websiteTitle').addClass(\"scrolledTitle\");\n\t\t\t$(\"#links\").removeClass(\"dropdown\");\n\t\t\tdocument.getElementById(\"pic2ID\").innerHTML = \"\";\n\t\t\tdocument.getElementById(\"pic3ID\").innerHTML = \"\";\n\t\t\tdocument.getElementById(\"topID\").innerHTML = \"Go to Top\";\n\t\t\tdocument.getElementById(\"dropdownMenu\").innerHTML = \"\";\n\t\t}\n\n\t\telse if(win < 116){\n\t\t\t\n\t\t\tanimateFlag = 1;\n\t\t\t$('#websiteTitle').removeClass(\"scrolledTitle\");\n\t\t\t$(\"#links\").addClass(\"dropdown\");\n\t\t\tdocument.getElementById(\"pic2ID\").innerHTML = \"Text Box 2\";\n\t\t\tdocument.getElementById(\"pic3ID\").innerHTML = \"Text Box 3\";\n\t\t\tdocument.getElementById(\"topID\").innerHTML = \"\";\n\t\t\tdocument.getElementById(\"dropdownMenu\").innerHTML = \"Go To\";\n\t\t}\n\t\t\n\t});\n\n\n\n\t\n\t\n\t\n\t\n\t\n\n});\n\n",
+			"file": "myscript.js",
+			"file_size": 1542,
+			"file_write_time": 131219895848240000,
+			"settings":
+			{
+				"buffer_size": 1485,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/kelly.wachtel/Desktop/Shopping Cart/index.html",
+			"settings":
+			{
+				"buffer_size": 3243,
 				"line_ending": "Windows"
 			}
 		}
@@ -119,24 +139,24 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
 					"file": "index.html",
-					"semi_transient": true,
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5166,
+						"buffer_size": 5051,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								2136,
+								2136
 							]
 						],
 						"settings":
@@ -146,7 +166,65 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
+						"translation.y": 1395.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "myscript.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1485,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1470,
+								1470
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/Users/kelly.wachtel/Desktop/Shopping Cart/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3243,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1901,
+								1901
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 780.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

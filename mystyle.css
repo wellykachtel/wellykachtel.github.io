@@ -24,9 +24,18 @@ body{
 	margin-top: -40px;
 }
 
-#txtColor {
+.txtColor {
 	color:white;
 }
-#glyphColor {
+.glyphColor {
 	color: #CD5C5C;
+}
+
+#footer {
+	color: white;
+	position:fixed;
+	left:0px;
+	bottom:0px;
+	height:30px;
+	width:100px;
 }

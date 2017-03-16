@@ -15,7 +15,16 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 5051,
+				"buffer_size": 5388,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "mystyle.css",
+			"settings":
+			{
+				"buffer_size": 486,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -28,14 +37,6 @@
 			"settings":
 			{
 				"buffer_size": 1485,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/kelly.wachtel/Desktop/Shopping Cart/index.html",
-			"settings":
-			{
-				"buffer_size": 3243,
 				"line_ending": "Windows"
 			}
 		}
@@ -85,6 +86,7 @@
 	],
 	"file_history":
 	[
+		"/C/Users/kelly.wachtel/Desktop/Shopping Cart/index.html",
 		"/C/Users/kelly.wachtel/Desktop/zendStatus/config/autoload/middleware-pipeline.global.php",
 		"/C/Users/kelly.wachtel/Desktop/zendStatus/config/autoload/dependencies.global.php",
 		"/C/Users/kelly.wachtel/Desktop/zendStatus/config/autoload/database.local.php.dist",
@@ -122,6 +124,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"6"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -139,7 +142,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -148,15 +151,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5051,
+						"buffer_size": 5388,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2136,
-								2136
+								4945,
+								4945
 							]
 						],
 						"settings":
@@ -166,7 +169,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1395.0,
+						"translation.y": 480.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -174,6 +177,34 @@
 				},
 				{
 					"buffer": 1,
+					"file": "mystyle.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 486,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								225,
+								225
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
 					"file": "myscript.js",
 					"semi_transient": false,
 					"settings":
@@ -199,35 +230,6 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/C/Users/kelly.wachtel/Desktop/Shopping Cart/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3243,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1901,
-								1901
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 780.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
 					"type": "text"
 				}
 			]
